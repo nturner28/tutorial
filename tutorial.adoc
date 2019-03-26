@@ -1,17 +1,28 @@
-= Tutorial Title Name
+= Installing a Raspberry Pi Hole
 
-Author: Your Name Here
+Author: Nick Turner
 
 == Intro
 
 Describe the goals and purpose of the tutorial here. You can change "Intro" to something meaningful about your tutorial, such as "About Wireshark Filters."
 
+== Learning Objectives
+
+* Install Rasbian to the Pi
+* Remote into the Raspberry Pi using SSH
+* Install Raspberry Pi Hole
+* Explain why a Raspberry Pi may be useful
+* 
+
 == Prerequisites
 
 The "*" is a bulleted list. If this can only be done on a Windows computer, using Packet Tracer, or any other technology, list those prerequisites here.
 
-* VirtualBox
-* Kali Virtual Machine
+* Raspberry Pi 
+* Micro SD Card
+* Micro SD Card Reader
+* Micro USB power cable
+* Keyboard and HDMI cable to configure the Raspberry Pi
 
 == Instructions
 
@@ -35,6 +46,8 @@ asciidoctor-pdf tutorial.adoc
 
 == Challenge
 
+* Can you find a way to secure the Raspberry Pi so that data is encrypted and safe?
+
 Provide some meaningful ways for the learner to apply their knowledge in a new way.
 
 Notice that a screenshot can be included in a separate paragraph without the "+".
@@ -43,4 +56,4 @@ image::blue-rectangle.png[]
 
 == Reflection
 
-Provide some thought questions that help the learner make sense of how the tutorial fits in the bigger picture.
+* Why would you want to block ads on a network, besides the fact that they are annoying?
