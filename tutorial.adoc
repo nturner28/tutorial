@@ -4,7 +4,7 @@ Author: Nick Turner
 
 == Intro
 
-Describe the goals and purpose of the tutorial here. You can change "Intro" to something meaningful about your tutorial, such as "About Wireshark Filters."
+The purpose of this tutorial is to show how to set up a Raspberry Pi as a DNS server known as a Pi Hole. This Pi Hole will be able to disable many different advertisements based on the advertiser's IP address. 
 
 == Learning Objectives
 
@@ -26,11 +26,12 @@ The "*" is a bulleted list. If this can only be done on a Windows computer, usin
 
 == Instructions
 
-Guide the person through the steps. Starting a line with a period is an automatically numbered list.
-
-. Step one.
-. Step two.
-. Step three. Use "+" and the  backtick character to add additional command.
+. Step one - Install Raspian Stretch
+. Step two - SSH into the Pi
+. Step three - Set a Static IP on the Pi
+. Step four - Install the Pi Hole
+. Step five - Set up the DNS Server
+. Step six - Install a blacklist
 +
 ```
 sudo su
