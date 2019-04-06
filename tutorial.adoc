@@ -1,6 +1,6 @@
 = Installing a Raspberry Pi Hole
 
-Author: Nick Turner
+Nick Turner
 
 == Intro
 
@@ -12,7 +12,6 @@ The purpose of this tutorial is to show how to set up a Raspberry Pi as a DNS se
 * Remote into the Raspberry Pi using SSH
 * Install Raspberry Pi Hole
 * Explain why a Raspberry Pi may be useful
-* 
 
 == Prerequisites
 
@@ -26,12 +25,24 @@ The "*" is a bulleted list. If this can only be done on a Windows computer, usin
 
 == Instructions
 
-. Step one - Install Raspian Stretch
-. Step two - SSH into the Pi
-. Step three - Set a Static IP on the Pi
-. Step four - Install the Pi Hole
-. Step five - Set up the DNS Server
-. Step six - Install a blacklist
+ Step one - Install Raspian Stretch
+ * Raspbian Stretch is the newest version of the Raspberry Pi's operating system. Visit the below website to download the zip file for Stetch. 
+ 
+```
+https://www.raspberrypi.org/downloads/raspbian/
+```
+
+* You'll also need to download software to flash the zip file to the micro sd card. You can download a flash software such sa BalenaEtcher to get the job done. Find the link to the download below. 
+
+```
+https://www.balena.io/etcher/
+```
+
+ Step two - SSH into the Pi
+ Step three - Set a Static IP on the Pi
+ Step four - Install the Pi Hole
+ Step five - Set up the DNS Server
+ Step six - Install a blacklist
 +
 ```
 sudo su
