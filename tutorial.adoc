@@ -33,7 +33,7 @@ The "*" is a bulleted list. If this can only be done on a Windows computer, usin
 https://www.raspberrypi.org/downloads/raspbian/
 ```
 
-image::Stetch Download.png[]
+image::Stretch Download.png[]
 
 
 * You'll also need to download software to flash the zip file to the micro sd card. You can download a flash software such sa BalenaEtcher to get the job done. Find the link to the download below. 
@@ -43,7 +43,20 @@ https://www.balena.io/etcher/
 ```
 image::Etcher Download.png[]
 
+* You will now need to plug in the USB micro SD card reader. The micro SD card should be in the reader. Open up Etcher and flash the download to the disk. If you've done so correctly, you'll get the something similar to the below screenshot.
+
+image::Flashing with Etcher.png[]
+
+*Put the micro SD card into the Raspberry Pi.
+*Now that the image is flashed the the micro SD card, you're going to want to plug in a HDMI cable, keyboard, and a mouse into the Raspberry Pi. The goal is to be able to set up the Raspberry Pi from a monitor, but once we set a static IP address, we can install the Raspberry Pi hole remotely using SSH. 
+
+*The Raspberry Pi 3 model B has built in wireless capabilities, but if your pi does not, you will need to invest in a wireless WiFi dongle. 
+
+
 == Step two - SSH into the Pi
+
+* First we need to enable SSH on the Rasberry Pi
+* Open the terminal to 
 == Step three - Set a Static IP on the Pi
 == Step four - Install the Pi Hole
 == Step five - Set up the DNS Server
