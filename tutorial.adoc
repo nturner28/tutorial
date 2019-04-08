@@ -33,13 +33,15 @@ The "*" is a bulleted list. If this can only be done on a Windows computer, usin
 https://www.raspberrypi.org/downloads/raspbian/
 ```
 
-image::blue-rectangle.png[]
+image::Stetch Download.png[]
+
 
 * You'll also need to download software to flash the zip file to the micro sd card. You can download a flash software such sa BalenaEtcher to get the job done. Find the link to the download below. 
 
 ```
 https://www.balena.io/etcher/
 ```
+image::Etcher Download.png[]
 
 == Step two - SSH into the Pi
 == Step three - Set a Static IP on the Pi
