@@ -22,7 +22,6 @@ The purpose of this tutorial is to show how to set up a Raspberry Pi as a DNS se
 * Micro USB power cable
 * Keyboard and HDMI cable to configure the Raspberry Pi
 
-== Instructions
 
 == Step One - Install Raspian Stretch
 
@@ -61,14 +60,13 @@ image::Flashing with Etcher.png[]
 
 * Open the terminal 
 * You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
-* Edit the /etc/dhcpcd.conf file and add the following 
+* Edit the /etc/dhcpcd.conf file with the following 
 
 ```
 sudo nano /etc/dhcpcd.conf
 ```
 
-* Here's what it should look like.
-* The only information that should be different is my IPv4 information, subnet, and broadcast.
+* Here's what it should look like. The only information that should be different is my IPv4 information, subnet, and broadcast.
 
 
 image::staticIP.png[]
@@ -119,8 +117,18 @@ Sudo curl -sSL https://install.pi-hole.net | bash
 192.168.1.28/admin
 ```
 * You can now login using the password that you've saved earlier
+* If you don't remember the pi hole password or didn't write it down (like I did) you can reset the pi hole's password with the following
+
+```
+pi hole -a -p
+```
 
 image::piHoleLogin.png[]
+
+* Once signed in, you need to enable listening on all interfaces. 
+* Go to Settings -> DNS -> Interface Listening Behavior -> Listen on all interfaces
+
+image::interfaceListening.png[]
 
 
 == Step five - Set up the DNS Server
@@ -132,6 +140,15 @@ image::piHoleLogin.png[]
 image::RouterDNS.png[]
 
 == Step six - Install a blacklist
+
+* The Pi Hole needs a block list to know what to block. I use Wally's List to find a good ad blocking list. They include 3 different lists to choose from. One that basically blocks everything, one that blocks only some things, and one right in the middle. The choice is yours. I recommend choosing whichever one suits you, based on how much you want blocked on your home network. Go to the website and just copy and paste the block list to the Block List section under Settings in the Pi Hole's web interface. 
+
+```
+https://v.firebog.net/hosts/lists.php
+```
+
+image::wally.png
+image::blacklist.png[]
 
 == Challenge
 
