@@ -55,9 +55,36 @@ image::Flashing with Etcher.png[]
 
 == Step two - SSH into the Pi
 
-* First we need to enable SSH on the Rasberry Pi
-* Open the terminal to 
+*First we need to enable SSH on the Rasberry Pi
+
+```
+sudo raspi-config
+```
+
+*Select "Interfacing Options"
+*Select SSH
+*Enable SSH by pressing Enter
+
+image::enableSSH.png[]
+
 == Step three - Set a Static IP on the Pi
+
+*Open the terminal 
+*You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
+*Edit the /etc/dhcpcd.conf file and add the following 
+
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+*Here is it should look like
+
+image::staticIP.png[]
+
+*Once your static IP is set, you can ssh into your Raspberry Pi using Putty
+
+image:putty.png[]
+
 == Step four - Install the Pi Hole
 == Step five - Set up the DNS Server
 == Step six - Install a blacklist
