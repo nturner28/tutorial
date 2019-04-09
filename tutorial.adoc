@@ -24,7 +24,7 @@ The purpose of this tutorial is to show how to set up a Raspberry Pi as a DNS se
 
 == Instructions
 
-== Step one - Install Raspian Stretch
+== Step One - Install Raspian Stretch
 
 * Raspbian Stretch is the newest version of the Raspberry Pi's operating system. Visit the below website to download the zip file for Stetch. 
  
@@ -57,9 +57,32 @@ image::Flashing with Etcher.png[]
 * Follow the set up wizard and make sure to connect to your home network. 
 
 
-== Step two - SSH into the Pi
+== Step Two - Set a Static IP on the Pi
 
-* First we need to enable SSH on the Rasberry Pi
+* Open the terminal 
+* You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
+* Edit the /etc/dhcpcd.conf file and add the following 
+
+```
+sudo nano /etc/dhcpcd.conf
+```
+
+* Here's what it should look like.
+* The only information that should be different is my IPv4 information, subnet, and broadcast.
+
+
+image::staticIP.png[]
+
+
+* Reset the Raspberry Pi for changes to go into effect.
+
+```
+sudo reboot 0
+```
+
+== Step Three - SSH into the Pi
+
+* We need to enable SSH on the Rasberry Pi
 * In the terminal, type the following
 
 ```
@@ -72,35 +95,11 @@ sudo raspi-config
 
 image::enableSSH.png[]
 
-
-== Step three - Set a Static IP on the Pi
-
-* Open the terminal 
-* You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
-* Edit the /etc/dhcpcd.conf file and add the following 
-
-```
-sudo nano /etc/dhcpcd.conf
-```
-
-* Here's what it should look like.
-
-
-image::staticIP.png[]
-
-
-* Reset the Raspberry Pi for changes to go into effect.
-
-```
-sudo reboot 0
-```
 * Open the command prompt and ping your Rasberry Pi's static IP to make sure the Pi is both on and has the IP set correctly.
 * Once your static IP is set, you can ssh into your Raspberry Pi using Putty
 * Sign into your Pi using the credentials set up during installation of the Pi
 
 image::ping.png[]
-
-image:putty.png[]
 
 == Step four - Install the Pi Hole
 
