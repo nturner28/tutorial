@@ -111,19 +111,36 @@ image:putty.png[]
 Sudo curl -sSL https://install.pi-hole.net | bash
 ```
 
+* This step can take some time, but when the wizard becomes available, you can mostly just hit enter and accept things how they are. 
+* When asked about your upstream providor, any are acceptable.
+* Once the wizard is complete, you should see a banner that says "Installation Complete!" Make sure that you take note of the password so that you can log into the Pi Hole's web interface. 
+* You should have the Pi Hole set up by now, so go to the web interface to start. Accomplish this by opening a browser on your preferred computer. Your web interface will be the static IP address of the Raspberry Pi /admin. Mine is listed below. 
+
+```
+192.168.1.28/admin
+```
+* You can now login using the password that you've saved earlier
+
+image::piHoleLogin.png[]
+
+
 == Step five - Set up the DNS Server
+
+* Your router naturally has a DNS server that is automatically enabled, so you will need to turn your ISP's DNS server off and enable yours as an alternate. My DNS settings are found under Basic Settings.
+* This DNS server will send the advertisers a 'fake' IP address, that way many advertisements will never be loaded on a webpage to begin with
+* Ever router has a different web interface, so it may be difficult to find. Just log into your router by typing it's IP address into the address bar. If you don't know the user name and password, you can likely find that information on the router. The login and username are probably just admin and password.
+
+image::RouterDNS.png[]
+
 == Step six - Install a blacklist
 
 == Challenge
 
 * Can you find a way to secure the Raspberry Pi so that data is encrypted and safe?
-
-Provide some meaningful ways for the learner to apply their knowledge in a new way.
-
-Notice that a screenshot can be included in a separate paragraph without the "+".
-
-image::blue-rectangle.png[]
+* Put the Raspberry Pi on a VPN so that you can access the Pi Hole from anywhere
 
 == Reflection
 
 * Why would you want to block ads on a network, besides the fact that they are annoying?
+* Why are web page advertisement blocked but not video ads, like on YouTube?
+* Does having a Network wide ad blocker have any advantage over an adblocking applicaton such as AdBlock Plus? Why?
