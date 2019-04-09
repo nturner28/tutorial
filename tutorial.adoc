@@ -88,6 +88,15 @@ sudo nano /etc/dhcpcd.conf
 image::staticIP.png[]
 
 
+* Reset the Raspberry Pi for changes to go into effect.
+
+```
+sudo reboot 0
+```
+* Open the command prompt and ping your Rasberry Pi's static IP to make sure the Pi is both on and has the IP set correctly.
+* If you're successful, you should be able to ssh into the Pi.
+
+image::ping.png[]
 
 * Once your static IP is set, you can ssh into your Raspberry Pi using Putty
 
