@@ -43,45 +43,53 @@ https://www.balena.io/etcher/
 ```
 image::Etcher Download.png[]
 
+
+
 * You will now need to plug in the USB micro SD card reader. The micro SD card should be in the reader. Open up Etcher and flash the download to the disk. If you've done so correctly, you'll get the something similar to the below screenshot.
 
 image::Flashing with Etcher.png[]
 
-*Put the micro SD card into the Raspberry Pi.
-*Now that the image is flashed the the micro SD card, you're going to want to plug in a HDMI cable, keyboard, and a mouse into the Raspberry Pi. The goal is to be able to set up the Raspberry Pi from a monitor, but once we set a static IP address, we can install the Raspberry Pi hole remotely using SSH. 
 
-*The Raspberry Pi 3 model B has built in wireless capabilities, but if your pi does not, you will need to invest in a wireless WiFi dongle. 
+ 
+* Put the micro SD card into the Raspberry Pi.
+* Now that the image is flashed the the micro SD card, you're going to want to plug in a HDMI cable, keyboard, and a mouse into the Raspberry Pi. The goal is to be able to set up the Raspberry Pi from a monitor, but once we set a static IP address, we can install the Raspberry Pi hole remotely using SSH. 
+
+* The Raspberry Pi 3 model B has built in wireless capabilities, but if your pi does not, you will need to invest in a wireless WiFi dongle. 
 
 
 == Step two - SSH into the Pi
 
-*First we need to enable SSH on the Rasberry Pi
+* First we need to enable SSH on the Rasberry Pi
 
 ```
 sudo raspi-config
 ```
 
-*Select "Interfacing Options"
-*Select SSH
-*Enable SSH by pressing Enter
+* Select "Interfacing Options"
+* Select SSH
+* Enable SSH by pressing Enter
 
 image::enableSSH.png[]
 
+
 == Step three - Set a Static IP on the Pi
 
-*Open the terminal 
-*You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
-*Edit the /etc/dhcpcd.conf file and add the following 
+* Open the terminal 
+* You will want to run ifconfig and netstat to find your Default Gateway (your router's IPv4 address), Netmask, and a desired IP address for both wlan0 and eth0
+* Edit the /etc/dhcpcd.conf file and add the following 
 
 ```
 sudo nano /etc/dhcpcd.conf
 ```
 
-*Here is it should look like
+* Here's what it should look like.
+
 
 image::staticIP.png[]
 
-*Once your static IP is set, you can ssh into your Raspberry Pi using Putty
+
+
+* Once your static IP is set, you can ssh into your Raspberry Pi using Putty
 
 image:putty.png[]
 
