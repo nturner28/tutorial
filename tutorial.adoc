@@ -149,6 +149,8 @@ https://v.firebog.net/hosts/lists.php
 
 image::wally.png[]
 
+
+
 image::blacklist.png[]
 
 You're DNS server through the Raspberry Pi Hole should be configured at a very basic level and working!
